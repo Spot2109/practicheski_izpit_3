@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataLayer
 {
-    class UserContext : IDB<User, string>
+    public class UserContext : IDB<User, string>
     {
         private practicheski_izpit_3Context ctx;
 

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataLayer
 {
-    class BookContext : IDB<Book, string>
+    public class BookContext : IDB<Book, string>
     {
         private practicheski_izpit_3Context ctx;
 
