@@ -47,14 +47,11 @@ namespace ServiceLayer
         }
         public static void Create()
         {
-            //Change 
-            Console.WriteLine("ID: ");
-            string id = Console.ReadLine();
             Console.WriteLine("Name: ");
             string name = Console.ReadLine();
             Console.WriteLine("Genre:");
             string genre = Console.ReadLine();
-            Book item = new Book(id, name, genre);
+            Book item = new Book(name, genre);
             ctx.Create(item);
         }
         public static void Read()
@@ -76,7 +73,6 @@ namespace ServiceLayer
         }
         public static void Update()
         {
-            //Change
             Console.WriteLine("ID: ");
             string id = Console.ReadLine();
             Console.WriteLine("Name: ");

@@ -29,7 +29,15 @@ namespace BusinessLayer
         private Author()
         {
         }
-
+        public Author(string name, string lname, string born, string died, string genres)
+        {
+            Name = name;
+            LName = lname;
+            Born = born;
+            Died = died;
+            Genres = genres;
+            ID = Guid.NewGuid().ToString();
+        }
         public Author(string id,string name, string lname,string born,string died, string genres)
         {
             ID = id;
@@ -38,6 +46,10 @@ namespace BusinessLayer
             Born = born;
             Died = died;
             Genres = genres;
+        }
+        public override string ToString()
+        {
+            return "ID: " + ID + " Name: " + Name + " LName: " + LName + "Born:" + Born + "Died:" + Died + "Genres:" + Genres;
         }
     }
 }

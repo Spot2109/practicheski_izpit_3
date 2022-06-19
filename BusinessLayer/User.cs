@@ -23,13 +23,23 @@ namespace BusinessLayer
         private User()
         {
         }
-
+        public User(string name, string lname, string dateexpire)
+        {
+            Name = name;
+            LName = lname;
+            DateExpire = dateexpire;
+            ID = Guid.NewGuid().ToString();
+        }
         public User(string id, string name, string lname, string dateexpire)
         {
             ID = id;
             Name = name;
             LName = lname;
             DateExpire = dateexpire;
+        }
+        public override string ToString()
+        {
+            return "ID: " + ID + " Name: " + Name + " LName: " + LName + "Date Expire:" + DateExpire;
         }
     }
 }

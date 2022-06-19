@@ -26,12 +26,21 @@ namespace BusinessLayer
         private Book()
         { 
         }
-
+        public Book(string name, string genre)
+        {
+            Name = name;
+            Genre = genre;
+            ID = Guid.NewGuid().ToString();
+        }
         public Book(string id, string name, string genre)
         {
             ID = id;
             Name = name;
             Genre = genre;
+        }
+        public override string ToString()
+        {
+            return "ID: " + ID + " Name: " + Name + " Genre: " + Genre;
         }
     }
 }

@@ -47,16 +47,13 @@ namespace ServiceLayer
         }
         public static void Create()
         {
-            //Change 
-            Console.WriteLine("ID: ");
-            string id = Console.ReadLine();
             Console.WriteLine("First Name: ");
             string name = Console.ReadLine();
             Console.WriteLine("Last Name: ");
             string lname = Console.ReadLine();
             Console.WriteLine("Date Expire: ");
             string dateexpire = Console.ReadLine();
-            User item = new User(id, name, lname, dateexpire);
+            User item = new User(name, lname, dateexpire);
             ctx.Create(item);
         }
         public static void Read()
@@ -78,7 +75,6 @@ namespace ServiceLayer
         }
         public static void Update()
         {
-            //Change
             Console.WriteLine("ID: ");
             string id = Console.ReadLine();
             Console.WriteLine("First Name: ");
