@@ -49,7 +49,7 @@ namespace BusinessLayer
         }
         public override string ToString()
         {
-            return "ID: " + ID + " Name: " + Name + " LName: " + LName + "Born:" + Born + "Died:" + Died + "Genres:" + Genres;
+            return "ID: " + ID + " Name: " + Name + " LName: " + LName + " Born: " + Born + " Died: " + Died + " Genres: " + Genres;
         }
     }
 }

@@ -39,7 +39,7 @@ namespace BusinessLayer
         }
         public override string ToString()
         {
-            return "ID: " + ID + " Name: " + Name + " LName: " + LName + "Date Expire:" + DateExpire;
+            return "ID: " + ID + " Name: " + Name + " LName: " + LName + " Date Expire: " + DateExpire;
         }
     }
 }

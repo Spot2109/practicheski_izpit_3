@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ServiceLayer
 {
-    public static class GameInteract
+    public static class BookInteract
     {
         private static readonly BookContext ctx = DBContextManager.GetBookContext();
         public static void Start()
@@ -47,11 +47,13 @@ namespace ServiceLayer
         }
         public static void Create()
         {
+            Console.WriteLine("ID: ");
+            string id = Console.ReadLine();
             Console.WriteLine("Name: ");
             string name = Console.ReadLine();
             Console.WriteLine("Genre:");
             string genre = Console.ReadLine();
-            Book item = new Book(name, genre);
+            Book item = new Book(id,name, genre);
             ctx.Create(item);
         }
         public static void Read()

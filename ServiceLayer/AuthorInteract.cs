@@ -8,7 +8,7 @@ using DataLayer;
 
 namespace ServiceLayer
 {
-    public static class CompanyInteract
+    public static class AuthorInteract
     {
         private static readonly AuthorContext ctx = DBContextManager.GetAuthorContext();
         public static void Start()
@@ -47,6 +47,8 @@ namespace ServiceLayer
         }
         public static void Create()
         {
+            Console.WriteLine("ID: ");
+            string id = Console.ReadLine();
             Console.WriteLine("First Name: ");
             string name = Console.ReadLine();
             Console.WriteLine("Last Name: ");
@@ -57,7 +59,7 @@ namespace ServiceLayer
             string died = Console.ReadLine();
             Console.WriteLine("Genres: ");
             string genres = Console.ReadLine();
-            Author item = new Author(name, lname, born, died, genres);
+            Author item = new Author(id, name, lname, born, died, genres);
             ctx.Create(item);
         }
         public static void Read()

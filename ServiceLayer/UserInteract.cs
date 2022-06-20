@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ServiceLayer
 {
-    public static class PersonInteract
+    public static class UserInteract
     {
         private static readonly UserContext ctx = DBContextManager.GetUserContext();
         public static void Start()
@@ -47,13 +47,15 @@ namespace ServiceLayer
         }
         public static void Create()
         {
+            Console.WriteLine("ID: ");
+            string id = Console.ReadLine();
             Console.WriteLine("First Name: ");
             string name = Console.ReadLine();
             Console.WriteLine("Last Name: ");
             string lname = Console.ReadLine();
             Console.WriteLine("Date Expire: ");
             string dateexpire = Console.ReadLine();
-            User item = new User(name, lname, dateexpire);
+            User item = new User(id,name, lname, dateexpire);
             ctx.Create(item);
         }
         public static void Read()
@@ -81,7 +83,7 @@ namespace ServiceLayer
             string fname = Console.ReadLine();
             Console.WriteLine("Last Name: ");
             string lname = Console.ReadLine();
-            Console.WriteLine("DaTE Expire: ");
+            Console.WriteLine("Date Expire: ");
             string dateexpire = Console.ReadLine();
             User item = new User(id, fname, lname, dateexpire);
             ctx.Update(item);
@@ -92,6 +94,6 @@ namespace ServiceLayer
             string id = Console.ReadLine();
             ctx.Delete(id);
         }
-
+      
     }
 }
